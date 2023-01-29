@@ -43,11 +43,12 @@ export default function CustomCard({
         }}
       >
         <div className="flex justify-between">
-            <Input placeholder="0" />
+            <Input width="250px" placeholder="0" />
             <CustomDropdown />
         </div>
-        <div className="flex justify-between">
-            <Input placeholder="0" />
+        <div className="flex justify-between mt-10">
+            <Input width="250px" placeholder="0" />
+            <CustomDropdown />
         </div>
       </Card.Body>
     </Card>
