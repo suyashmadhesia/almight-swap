@@ -1,4 +1,5 @@
 import { Card, Container, Text, Input } from "@nextui-org/react";
+import CustomButton from "./Button";
 import CustomDropdown from "./Dropdown";
 
 interface CustomCardProp {
@@ -50,6 +51,10 @@ export default function CustomCard({
             <Input width="250px" placeholder="0" />
             <CustomDropdown />
         </div>
+        <div className="mt-10">
+
+        </div>
+        <CustomButton size="lg" name="Connect Wallet" />
       </Card.Body>
     </Card>
   );
