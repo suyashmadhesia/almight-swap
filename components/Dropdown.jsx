@@ -1,9 +1,7 @@
 import React from "react";
 import { Dropdown, Image } from "@nextui-org/react";
 
-export default function CustomDropdown () {
-  const [selected, setSelected] = React.useState(new Set(["USDT"]));
-    const selectedValue = Array.from(selected);
+export default function CustomDropdown ({setSelected, selected, selectedValue}) {
     return <Dropdown className="bg-black">
       <Dropdown.Button flat color="secondary" css={{ tt: "capitalize" }}>
         {selectedValue}

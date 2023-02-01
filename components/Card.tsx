@@ -1,6 +1,7 @@
 import { Card, Container, Text, Input } from "@nextui-org/react";
 import CustomButton from "./Button";
 import CustomDropdown from "./Dropdown";
+import React from "react";
 
 interface CustomCardProp {
   fromCurrency?: string;
@@ -17,6 +18,13 @@ export default function CustomCard({
   fromCurrency = "ETH",
   toCurrency = "ALM",
 }: CustomCardProp) {
+
+  const [selected1, setSelected1] = React.useState(new Set(["USDT"]));
+  const selectedValue1 = Array.from(selected1);
+
+  const [selected2, setSelected2] = React.useState(new Set(["ALM"]));
+  const selectedValue2 = Array.from(selected2);
+
   return (
     <Card
       css={{
@@ -45,11 +53,11 @@ export default function CustomCard({
       >
         <div className="flex justify-between">
             <Input width="250px" placeholder="0" />
-            <CustomDropdown />
+            <CustomDropdown selected={selected1} selectedValue={selectedValue1} setSelected={setSelected1} />
         </div>
         <div className="flex justify-between mt-10">
             <Input width="250px" placeholder="0" />
-            <CustomDropdown />
+            <CustomDropdown selected={selected2} selectedValue={selectedValue2} setSelected={setSelected2} />
         </div>
         <div className="mt-10">
 
